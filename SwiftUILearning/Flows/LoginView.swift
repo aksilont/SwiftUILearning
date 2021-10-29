@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct LoginView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     
     @State private var login = ""
     @State private var password = ""
@@ -61,7 +62,9 @@ struct LoginView: View {
                     HStack {
                         Spacer()
                         Button {
-                            print("login")
+                            withAnimation {
+                                viewRouter.currentPage = .homeView
+                            }
                         } label: {
                             Image(systemName: "play").foregroundColor(.white).font(.largeTitle)
                         }
@@ -143,6 +146,6 @@ extension UIApplication {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView().environmentObject(ViewRouter())
     }
 }

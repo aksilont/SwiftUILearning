@@ -21,6 +21,12 @@ struct HomeView: View {
                     Image(systemName: "network")
                     Text("Сообщества")
                 }
+            
+            NewsView()
+                .tabItem {
+                    Image(systemName: "newspaper")
+                    Text("Новости")
+                }
         }
     }
 }

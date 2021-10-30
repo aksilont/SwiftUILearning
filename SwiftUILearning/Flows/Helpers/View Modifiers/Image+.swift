@@ -11,6 +11,7 @@ extension Image {
     func makeCircleImage() -> some View {
         self
             .resizable()
+            .scaledToFill()
             .frame(width: 50, height: 50)
             .clipShape(Circle())
             .overlay(Circle().strokeBorder(.white, lineWidth: 2))

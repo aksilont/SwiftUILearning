@@ -14,7 +14,7 @@ struct FriendsView: View {
         NavigationView {
             ListWithoutSeparator(items: users) { item in
                 ItemRow(image: Image(item.photo)) {
-                    NavigationLink(destination: FriendDetailView()) {
+                    NavigationLink(destination: FriendDetailView(user: item)) {
                         UserRow(user: item)
                     }
                     .foregroundColor(.black)

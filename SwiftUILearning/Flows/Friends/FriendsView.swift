@@ -8,18 +8,31 @@
 import SwiftUI
 
 struct FriendsView: View {
-    var users: [User] = User.fakeUsers()
+    var users = [String: [User]]()
+    
+    init() {
+        users = Dictionary(
+            grouping: User.fakeUsers(),
+            by: { "\($0.fullName.first!)" }
+        )
+    }
     
     var body: some View {
         NavigationView {
-            ListWithoutSeparator(items: users) { item in
-                ItemRow(image: Image(item.photo)) {
-                    NavigationLink(destination: FriendDetailView(user: item)) {
-                        UserRow(user: item)
+            List {
+                ForEach(users.keys.sorted(by: <), id: \.self) { key in
+                    Section(header: Text(key).font(.title)) {
+                        ForEach(users[key]!) { item in
+                            NavigationLink(destination: FriendDetailView(user: item)) {
+                                ItemRow(image: Image(item.photo)) {
+                                    UserRow(user: item)
+                                }
+                            }
+                        }
                     }
-                    .foregroundColor(.black)
                 }
             }
+            .listStyle(PlainListStyle())
             .navigationTitle("Друзья")
         }
     }

@@ -8,25 +8,20 @@
 import SwiftUI
 
 struct FriendsView: View {
-    var users = [String: [User]]()
+    @ObservedObject private var friendsViewModel: FriendsViewModel
     
-    init() {
-        users = Dictionary(
-            grouping: User.fakeUsers(),
-            by: { "\($0.fullName.first!)" }
-        )
+    init(friendsViewModel: FriendsViewModel) {
+        self.friendsViewModel = friendsViewModel
     }
-    
+
     var body: some View {
         NavigationView {
             List {
-                ForEach(users.keys.sorted(by: <), id: \.self) { key in
+                ForEach(friendsViewModel.friends.keys.sorted(by: <), id: \.self) { key in
                     Section(header: Text(key).font(.title)) {
-                        ForEach(users[key]!) { item in
-                            NavigationLink(destination: FriendDetailView(user: item)) {
-                                ItemRow(image: Image(item.photo)) {
-                                    UserRow(user: item)
-                                }
+                        ForEach(friendsViewModel.friends[key]!) { currentFriend in
+                            NavigationLink(destination: FriendDetailView(friend: currentFriend)) {
+                                FriendRow(friend: currentFriend)
                             }
                         }
                     }
@@ -35,11 +30,14 @@ struct FriendsView: View {
             .listStyle(PlainListStyle())
             .navigationTitle("Друзья")
         }
+        .onAppear {
+            friendsViewModel.fetchFriends()
+        }
     }
 }
 
-struct FriendsView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendsView()
-    }
-}
+//struct FriendsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FriendsView()
+//    }
+//}

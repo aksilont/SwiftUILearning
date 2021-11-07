@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var friendsViewModel = FriendsViewModel(service: VKService())
+    
     var body: some View {
         TabView {
-            FriendsView()
+            FriendsView(friendsViewModel: friendsViewModel)
                 .tabItem {
                     Image(systemName: "person.3")
                     Text("Друзья")

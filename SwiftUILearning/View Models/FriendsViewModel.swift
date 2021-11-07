@@ -9,9 +9,7 @@ import Foundation
 import Combine
 
 class FriendsViewModel: ObservableObject {
-//    @Published var friends = [String: [Friend]]()
-    var friends = [String: [Friend]]()
-    let objectWillChange: ObservableObjectPublisher = ObjectWillChangePublisher()
+    @Published var friends = [String: [Friend]]()
     
     var service: VKService
     
@@ -25,7 +23,6 @@ class FriendsViewModel: ObservableObject {
                 grouping: items,
                 by: { "\($0.lastName.first!)" }
             )
-            objectWillChange.send()
         }
     }
 }

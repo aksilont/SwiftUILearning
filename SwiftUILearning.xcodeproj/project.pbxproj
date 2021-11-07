@@ -16,6 +16,7 @@
 		7A09E0EE2726F4D500E5789B /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09E0ED2726F4D500E5789B /* ItemRow.swift */; };
 		7A2D45B627273C90005A1318 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D45B527273C90005A1318 /* FriendsView.swift */; };
 		7A2D45B827273C98005A1318 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D45B727273C98005A1318 /* GroupsView.swift */; };
+		7A5AA9D227370E5700A875C0 /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AA9D127370E5700A875C0 /* VKLoginWebView.swift */; };
 		7A765FEB2721E2630055E17B /* SwiftUILearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A765FEA2721E2630055E17B /* SwiftUILearningApp.swift */; };
 		7A765FED2721E2630055E17B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A765FEC2721E2630055E17B /* MainView.swift */; };
 		7A765FEF2721E2660055E17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A765FEE2721E2660055E17B /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		7A09E0ED2726F4D500E5789B /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		7A2D45B527273C90005A1318 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		7A2D45B727273C98005A1318 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		7A5AA9D127370E5700A875C0 /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
 		7A765FE72721E2630055E17B /* SwiftUILearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A765FEA2721E2630055E17B /* SwiftUILearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningApp.swift; sourceTree = "<group>"; };
 		7A765FEC2721E2630055E17B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				7A765FEC2721E2630055E17B /* MainView.swift */,
+				7A5AA9D127370E5700A875C0 /* VKLoginWebView.swift */,
 				7A765FF92721E3B00055E17B /* LoginView.swift */,
 				7A09E0E62726AAB100E5789B /* HomeView.swift */,
 				7A2D45BA2727511B005A1318 /* Friends */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5AA9D227370E5700A875C0 /* VKLoginWebView.swift in Sources */,
 				7AC8D7E92729E82600F9412C /* FriendDetailView.swift in Sources */,
 				7ACAAF3B272B3FD800B73B1D /* News.swift in Sources */,
 				7A09E0EC2726AEE800E5789B /* ViewRouter.swift in Sources */,

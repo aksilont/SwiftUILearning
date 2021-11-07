@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SwiftUILearningApp: App {
+    @StateObject private var viewRouter = ViewRouter()
+    
     var body: some Scene {
         WindowGroup {
-            MainView().environmentObject(ViewRouter())
+            MainView().environmentObject(viewRouter)
         }
     }
 }

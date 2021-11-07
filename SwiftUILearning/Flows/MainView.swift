@@ -13,7 +13,16 @@ struct MainView: View {
     var body: some View {
         switch viewRouter.currentPage {
         case .loginView:
-            LoginView()
+            VKLoginWebView()
+                .onAppear {
+                    NotificationCenter.default.addObserver(forName: NSNotification.Name("vkTokenSaved"),
+                                                           object: nil,
+                                                           queue: .main) { _ in
+                        withAnimation(.easeOut(duration: 0.5)) {
+                            viewRouter.currentPage = .homeView
+                        }
+                    }
+                }
         case .homeView:
             HomeView()
                 .transition(AnyTransition.scale)

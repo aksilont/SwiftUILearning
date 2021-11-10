@@ -30,7 +30,7 @@ struct ItemRow<ItemView>: View where ItemView: View {
 
 struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsView()
+//        FriendsView()
         GroupsView()
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct FriendDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
-    var user: User
+    var friend: Friend
     var gallary: [String] = (1...11).map{ "gal\($0)" }
     var body: some View {
         ScrollView {
@@ -27,15 +27,15 @@ struct FriendDetailView: View {
             leading: Button(action: { mode.wrappedValue.dismiss() }) {
                 HStack {
                     Image(systemName: "arrow.left")
-                    Text(user.fullName)
+                    Text(friend.fullName)
                 }
             }
         )
     }
 }
 
-struct FriendDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendDetailView(user: User.fakeUsers()[0])
-    }
-}
+//struct FriendDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FriendsView()
+//    }
+//}

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemRow<ItemView>: View where ItemView: View {
+    @State private var isPressed: Bool = false
     var content: () -> ItemView
     var image: Image
     
@@ -19,7 +20,16 @@ struct ItemRow<ItemView>: View where ItemView: View {
     var body: some View {
         ZStack {
             HStack(spacing: 15) {
-                image.makeCircleImage()
+                image
+                    .makeCircleImage()
+                    .scaleEffect(isPressed ? 1.2 : 1)
+                    .animation(.spring(response: 0.4, dampingFraction: 0.6), value: isPressed)
+                    .onTapGesture {
+                        isPressed.toggle()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            isPressed.toggle()
+                        }
+                    }
                 content()
                 Spacer()
             }

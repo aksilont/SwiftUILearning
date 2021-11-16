@@ -11,14 +11,18 @@ struct FriendDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var friend: Friend
-    var gallary: [String] = (1...11).map{ "gal\($0)" }
+    var gallary: [String] = (1...1).map{ "gal\($0)" }
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem()]) {
                 ForEach(gallary, id: \.self) { item in
-                    Image(item)
-                        .resizable()
-                        .scaledToFit()
+                    VStack {
+                        Image(item)
+                            .resizable()
+                            .scaledToFit()
+                        LikeButton()
+                            .padding([.leading, .bottom])
+                    }
                 }
             }
         }

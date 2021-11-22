@@ -14,22 +14,22 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         let friendsViewModel = FriendsViewModel(service: VKService())
-        let friendsView = UIHostingController(rootView: FriendsView(friendsViewModel: friendsViewModel))
-        friendsView.tabBarItem = UITabBarItem(title: "Друзья",
+        let friendsVC = UIHostingController(rootView: FriendsView(friendsViewModel: friendsViewModel))
+        friendsVC.tabBarItem = UITabBarItem(title: "Друзья",
                                              image: UIImage(systemName: "person.3"),
                                              selectedImage: UIImage(systemName: "person.3.fill"))
         
-        let groupView = UIHostingController(rootView: GroupsView())
-        groupView.tabBarItem = UITabBarItem(title: "Сообщества",
+        let groupVC = UIHostingController(rootView: GroupsView())
+        groupVC.tabBarItem = UITabBarItem(title: "Сообщества",
                                             image: UIImage(systemName: "network"),
                                             selectedImage: UIImage(systemName: "network.badge.shield.half.filled"))
         
-        let newsView = UIHostingController(rootView: NewsView())
-        newsView.tabBarItem = UITabBarItem(title: "Новости",
+        let newsVC = UIHostingController(rootView: NewsView())
+        newsVC.tabBarItem = UITabBarItem(title: "Новости",
                                            image: UIImage(systemName: "newspaper"),
                                            selectedImage: UIImage(systemName: "newspaper.fill"))
         
-        setViewControllers([friendsView, groupView, newsView], animated: true)
+        setViewControllers([friendsVC, groupVC, newsVC], animated: true)
     }
 
 }

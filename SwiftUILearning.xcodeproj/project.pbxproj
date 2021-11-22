@@ -28,6 +28,9 @@
 		7A765FFA2721E3B00055E17B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A765FF92721E3B00055E17B /* LoginView.swift */; };
 		7A84276D274BBA9A00920FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84276C274BBA9A00920FD1 /* AppDelegate.swift */; };
 		7A84276F274BBB4400920FD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84276E274BBB4400920FD1 /* SceneDelegate.swift */; };
+		7A842774274BC79F00920FD1 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A842773274BC79F00920FD1 /* MainCoordinator.swift */; };
+		7A898033274C178B00803ECF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A898032274C178B00803ECF /* MainTabBarController.swift */; };
+		7A898035274C200200803ECF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A898034274C200200803ECF /* LoginViewModel.swift */; };
 		7AB3F9AB2742FBD1009A72FC /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3F9AA2742FBD1009A72FC /* LikeButton.swift */; };
 		7AC8D7E62729975700F9412C /* ListWithoutSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC8D7E52729975700F9412C /* ListWithoutSeparator.swift */; };
 		7AC8D7E92729E82600F9412C /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC8D7E82729E82600F9412C /* FriendDetailView.swift */; };
@@ -63,6 +66,9 @@
 		7A84276C274BBA9A00920FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A84276E274BBB4400920FD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7A842770274BBB6C00920FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A842773274BC79F00920FD1 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7A898032274C178B00803ECF /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7A898034274C200200803ECF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7AB3F9AA2742FBD1009A72FC /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		7AC8D7E52729975700F9412C /* ListWithoutSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithoutSeparator.swift; sourceTree = "<group>"; };
 		7AC8D7E82729E82600F9412C /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7A09E0EB2726AEE800E5789B /* ViewRouter.swift */,
+				7A842773274BC79F00920FD1 /* MainCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -138,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				7A5AA9D42738387600A875C0 /* FriendsViewModel.swift */,
+				7A898034274C200200803ECF /* LoginViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 		7A765FF82721E3960055E17B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				7A898032274C178B00803ECF /* MainTabBarController.swift */,
 				7A765FEC2721E2630055E17B /* MainView.swift */,
 				7A5AA9D127370E5700A875C0 /* VKLoginWebView.swift */,
 				7A765FF92721E3B00055E17B /* LoginView.swift */,
@@ -331,6 +340,7 @@
 			files = (
 				7A5AA9D227370E5700A875C0 /* VKLoginWebView.swift in Sources */,
 				7AC8D7E92729E82600F9412C /* FriendDetailView.swift in Sources */,
+				7A898033274C178B00803ECF /* MainTabBarController.swift in Sources */,
 				7ACAAF3B272B3FD800B73B1D /* News.swift in Sources */,
 				7A09E0EC2726AEE800E5789B /* ViewRouter.swift in Sources */,
 				7A84276D274BBA9A00920FD1 /* AppDelegate.swift in Sources */,
@@ -341,9 +351,11 @@
 				7AC8D7ED2729F11A00F9412C /* TextInfo.swift in Sources */,
 				7A765FFA2721E3B00055E17B /* LoginView.swift in Sources */,
 				7AB3F9AB2742FBD1009A72FC /* LikeButton.swift in Sources */,
+				7A842774274BC79F00920FD1 /* MainCoordinator.swift in Sources */,
 				7A84276F274BBB4400920FD1 /* SceneDelegate.swift in Sources */,
 				7A09E0E52726AA9200E5789B /* GroupRow.swift in Sources */,
 				7A765FED2721E2630055E17B /* MainView.swift in Sources */,
+				7A898035274C200200803ECF /* LoginViewModel.swift in Sources */,
 				7A09E0E32726AA8A00E5789B /* FriendRow.swift in Sources */,
 				7A5AA9D52738387600A875C0 /* FriendsViewModel.swift in Sources */,
 				7A2D45B627273C90005A1318 /* FriendsView.swift in Sources */,

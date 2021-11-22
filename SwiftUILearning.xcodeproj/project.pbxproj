@@ -22,11 +22,12 @@
 		7A5AA9DA2738425A00A875C0 /* VKResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AA9D92738425A00A875C0 /* VKResponse.swift */; };
 		7A5AA9DD2738470D00A875C0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7A5AA9DC2738470D00A875C0 /* Kingfisher */; };
 		7A5AA9DF2738485400A875C0 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AA9DE2738485400A875C0 /* CircleImage.swift */; };
-		7A765FEB2721E2630055E17B /* SwiftUILearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A765FEA2721E2630055E17B /* SwiftUILearningApp.swift */; };
 		7A765FED2721E2630055E17B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A765FEC2721E2630055E17B /* MainView.swift */; };
 		7A765FEF2721E2660055E17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A765FEE2721E2660055E17B /* Assets.xcassets */; };
 		7A765FF22721E2660055E17B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A765FF12721E2660055E17B /* Preview Assets.xcassets */; };
 		7A765FFA2721E3B00055E17B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A765FF92721E3B00055E17B /* LoginView.swift */; };
+		7A84276D274BBA9A00920FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84276C274BBA9A00920FD1 /* AppDelegate.swift */; };
+		7A84276F274BBB4400920FD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84276E274BBB4400920FD1 /* SceneDelegate.swift */; };
 		7AB3F9AB2742FBD1009A72FC /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3F9AA2742FBD1009A72FC /* LikeButton.swift */; };
 		7AC8D7E62729975700F9412C /* ListWithoutSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC8D7E52729975700F9412C /* ListWithoutSeparator.swift */; };
 		7AC8D7E92729E82600F9412C /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC8D7E82729E82600F9412C /* FriendDetailView.swift */; };
@@ -55,11 +56,13 @@
 		7A5AA9D92738425A00A875C0 /* VKResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKResponse.swift; sourceTree = "<group>"; };
 		7A5AA9DE2738485400A875C0 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		7A765FE72721E2630055E17B /* SwiftUILearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A765FEA2721E2630055E17B /* SwiftUILearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningApp.swift; sourceTree = "<group>"; };
 		7A765FEC2721E2630055E17B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7A765FEE2721E2660055E17B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A765FF12721E2660055E17B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A765FF92721E3B00055E17B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7A84276C274BBA9A00920FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A84276E274BBB4400920FD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7A842770274BBB6C00920FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AB3F9AA2742FBD1009A72FC /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		7AC8D7E52729975700F9412C /* ListWithoutSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithoutSeparator.swift; sourceTree = "<group>"; };
 		7AC8D7E82729E82600F9412C /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
@@ -167,12 +170,13 @@
 		7A765FE92721E2630055E17B /* SwiftUILearning */ = {
 			isa = PBXGroup;
 			children = (
-				7A765FEA2721E2630055E17B /* SwiftUILearningApp.swift */,
+				7A842772274BBBFA00920FD1 /* AppDelegate */,
 				7A5AA9D62738395600A875C0 /* Services */,
 				7A09E0E82726AE9600E5789B /* Navigation */,
 				7A765FF82721E3960055E17B /* Flows */,
 				7A5AA9D32738385800A875C0 /* View Models */,
 				7A09E0DD2726A8C800E5789B /* Models */,
+				7A842771274BBBEE00920FD1 /* Environment */,
 				7A765FEE2721E2660055E17B /* Assets.xcassets */,
 				7A765FF02721E2660055E17B /* Preview Content */,
 			);
@@ -200,6 +204,23 @@
 				7A2D45BC2727514E005A1318 /* Helpers */,
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		7A842771274BBBEE00920FD1 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				7A842770274BBB6C00920FD1 /* Info.plist */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		7A842772274BBBFA00920FD1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7A84276C274BBA9A00920FD1 /* AppDelegate.swift */,
+				7A84276E274BBB4400920FD1 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		7AC8D7E72729E78F00F9412C /* Views */ = {
@@ -312,6 +333,7 @@
 				7AC8D7E92729E82600F9412C /* FriendDetailView.swift in Sources */,
 				7ACAAF3B272B3FD800B73B1D /* News.swift in Sources */,
 				7A09E0EC2726AEE800E5789B /* ViewRouter.swift in Sources */,
+				7A84276D274BBA9A00920FD1 /* AppDelegate.swift in Sources */,
 				7A2D45B827273C98005A1318 /* GroupsView.swift in Sources */,
 				7ACAAF35272B3FB300B73B1D /* NewsView.swift in Sources */,
 				7A09E0DF2726A8E200E5789B /* Friend.swift in Sources */,
@@ -319,6 +341,7 @@
 				7AC8D7ED2729F11A00F9412C /* TextInfo.swift in Sources */,
 				7A765FFA2721E3B00055E17B /* LoginView.swift in Sources */,
 				7AB3F9AB2742FBD1009A72FC /* LikeButton.swift in Sources */,
+				7A84276F274BBB4400920FD1 /* SceneDelegate.swift in Sources */,
 				7A09E0E52726AA9200E5789B /* GroupRow.swift in Sources */,
 				7A765FED2721E2630055E17B /* MainView.swift in Sources */,
 				7A09E0E32726AA8A00E5789B /* FriendRow.swift in Sources */,
@@ -334,7 +357,6 @@
 				7ACAAF37272B3FC400B73B1D /* NewsDetailView.swift in Sources */,
 				7A5AA9DF2738485400A875C0 /* CircleImage.swift in Sources */,
 				7AC8D7E62729975700F9412C /* ListWithoutSeparator.swift in Sources */,
-				7A765FEB2721E2630055E17B /* SwiftUILearningApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +490,7 @@
 				DEVELOPMENT_TEAM = LA6FA5G5XC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftUILearning/Environment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -498,7 +520,7 @@
 				DEVELOPMENT_TEAM = LA6FA5G5XC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftUILearning/Environment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -11,9 +11,12 @@ import WebKit
 struct VKLoginWebView: UIViewRepresentable {
     fileprivate let navigationDelegate = WebViewNavigationDelegate()
     
+    var loginViewModel: LoginViewModel?
+    
     func makeUIView(context: Context) -> WKWebView {
 //        cleanWebViewCookies()
         let webView = WKWebView()
+        navigationDelegate.loginViewModel = loginViewModel
         webView.navigationDelegate = navigationDelegate
         return webView
     }
@@ -58,6 +61,8 @@ struct VKLoginWebView: UIViewRepresentable {
 }
 
 class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
+    var loginViewModel: LoginViewModel?
+    
     func webView(
         _ webView: WKWebView,
         decidePolicyFor navigationResponse: WKNavigationResponse,
@@ -91,6 +96,7 @@ class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
             
             UserDefaults.standard.set(token, forKey: "vkToken")
             NotificationCenter.default.post(name: NSNotification.Name("vkTokenSaved"), object: self)
+            loginViewModel?.isUserLoggedIn = true
             
             decisionHandler(.cancel)
         }

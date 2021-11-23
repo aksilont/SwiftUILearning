@@ -9,8 +9,12 @@ import SwiftUI
 
 struct LikeButton: View {
     @State private var isLiked = false
-    @State private var likesCount = Int.random(in: 100...500)
+    @State private var likesCount: Int
     @State private var isPressed = false
+    
+    init(_ likesCount: Int) {
+        self.likesCount = likesCount
+    }
     
     var body: some View {
         HStack {
@@ -37,6 +41,6 @@ struct LikeButton: View {
 
 struct LikeButton_Previews: PreviewProvider {
     static var previews: some View {
-        LikeButton()
+        LikeButton(56789)
     }
 }

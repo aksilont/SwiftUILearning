@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct FriendDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @ObservedObject private var photoViewModel = PhotoViewModel()
+    @State private var photoViewHeight: CGFloat? = nil
     
     let columns = [
         GridItem(.flexible(minimum: 0, maximum: .infinity)),
@@ -18,20 +18,14 @@ struct FriendDetailView: View {
     ]
     
     var friend: Friend
+    
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
-                LazyVGrid(columns: columns, alignment: .center, spacing: 16) {
+                LazyVGrid(columns: columns) {
                     ForEach(photoViewModel.photos) { item in
-                        VStack {
-                            KFImage(URL(string: item.url))
-                                .resizable()
-                                .scaledToFit()
-                            LikeButton(item.likes)
-                                .padding(.leading)
-                        }
-                        .frame(height: geometry.size.width / 2)
-                        .padding()
+                        PhotoView(photo: item)
+                            .frame(height: photoViewHeight)
                     }
                 }
             }
@@ -48,6 +42,9 @@ struct FriendDetailView: View {
         .onAppear {
             photoViewModel.fetchFriends(userId: friend.id)
         }
-        
+        .onPreferenceChange(PhotoHeightPreferenceKey.self) { height in
+            photoViewHeight = height
+        }
+        .padding(.horizontal, 5)
     }
 }

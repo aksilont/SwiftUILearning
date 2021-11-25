@@ -22,6 +22,7 @@
 		7A5AA9DF2738485400A875C0 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AA9DE2738485400A875C0 /* CircleImage.swift */; };
 		7A765FEF2721E2660055E17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A765FEE2721E2660055E17B /* Assets.xcassets */; };
 		7A765FF22721E2660055E17B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A765FF12721E2660055E17B /* Preview Assets.xcassets */; };
+		7A83CB79274E67A400F1A9D4 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A83CB78274E67A400F1A9D4 /* PhotoView.swift */; };
 		7A84276D274BBA9A00920FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84276C274BBA9A00920FD1 /* AppDelegate.swift */; };
 		7A84276F274BBB4400920FD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84276E274BBB4400920FD1 /* SceneDelegate.swift */; };
 		7A842774274BC79F00920FD1 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A842773274BC79F00920FD1 /* MainCoordinator.swift */; };
@@ -57,6 +58,7 @@
 		7A765FE72721E2630055E17B /* SwiftUILearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A765FEE2721E2660055E17B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A765FF12721E2660055E17B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A83CB78274E67A400F1A9D4 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		7A84276C274BBA9A00920FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A84276E274BBB4400920FD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7A842770274BBB6C00920FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,12 +203,21 @@
 			children = (
 				7A898032274C178B00803ECF /* MainTabBarController.swift */,
 				7A5AA9D127370E5700A875C0 /* VKLoginWebView.swift */,
+				7A83CB77274E678E00F1A9D4 /* Photo */,
 				7A2D45BA2727511B005A1318 /* Friends */,
 				7A2D45BB27275125005A1318 /* Groups */,
 				7ACAAF33272B3FA700B73B1D /* News */,
 				7A2D45BC2727514E005A1318 /* Helpers */,
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		7A83CB77274E678E00F1A9D4 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				7A83CB78274E67A400F1A9D4 /* PhotoView.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 		7A842771274BBBEE00920FD1 /* Environment */ = {
@@ -335,6 +346,7 @@
 				7AA39D32274D7F0C00ACB616 /* Photo.swift in Sources */,
 				7A5AA9D227370E5700A875C0 /* VKLoginWebView.swift in Sources */,
 				7AC8D7E92729E82600F9412C /* FriendDetailView.swift in Sources */,
+				7A83CB79274E67A400F1A9D4 /* PhotoView.swift in Sources */,
 				7A898033274C178B00803ECF /* MainTabBarController.swift in Sources */,
 				7ACAAF3B272B3FD800B73B1D /* News.swift in Sources */,
 				7A84276D274BBA9A00920FD1 /* AppDelegate.swift in Sources */,

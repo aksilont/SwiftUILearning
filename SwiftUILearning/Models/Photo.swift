@@ -5,13 +5,16 @@
 //  Created by Aksilont on 23.11.2021.
 //
 
-import Foundation
+import UIKit
 
 struct PhotoSizes: Decodable {
     var height: Int
     var width: Int
     var url: String
     var type: String
+    var aspectRatio: CGFloat {
+        return CGFloat(height) / CGFloat(width)
+    }
 }
 
 final class Photo: Identifiable, Decodable {
@@ -22,6 +25,9 @@ final class Photo: Identifiable, Decodable {
     var text: String = ""
     var sizesOfPhoto: [PhotoSizes] = []
     var url: String = ""
+    var height: Int = 0
+    var width: Int = 0
+    var aspectRatio: CGFloat = 1.0
     
     var comments: Int = 0
     var likes: Int = 0
@@ -73,6 +79,9 @@ final class Photo: Identifiable, Decodable {
         }
         
         url = sizesOfPhoto.last?.url ?? ""
+        height = sizesOfPhoto.last?.height ?? 0
+        width = sizesOfPhoto.last?.width ?? 0
+        aspectRatio = sizesOfPhoto.last?.aspectRatio ?? 1.0
     }
     
 }

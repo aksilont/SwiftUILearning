@@ -37,10 +37,3 @@ struct FriendRow: View {
         }
     }
 }
-
-
-struct UserRow_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}

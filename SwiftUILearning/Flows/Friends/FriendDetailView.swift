@@ -9,37 +9,42 @@ import SwiftUI
 
 struct FriendDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @ObservedObject private var photoViewModel = PhotoViewModel()
+    @State private var photoViewHeight: CGFloat? = nil
+    
+    let columns = [
+        GridItem(.flexible(minimum: 0, maximum: .infinity)),
+        GridItem(.flexible(minimum: 0, maximum: .infinity)),
+    ]
     
     var friend: Friend
-    var gallary: [String] = (1...1).map{ "gal\($0)" }
+    
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: [GridItem()]) {
-                ForEach(gallary, id: \.self) { item in
-                    VStack {
-                        Image(item)
-                            .resizable()
-                            .scaledToFit()
-                        LikeButton()
-                            .padding([.leading, .bottom])
+        GeometryReader { geometry in
+            ScrollView(.vertical) {
+                LazyVGrid(columns: columns) {
+                    ForEach(photoViewModel.photos) { item in
+                        PhotoView(photo: item)
+                            .frame(height: photoViewHeight)
                     }
                 }
             }
-        }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(
-            leading: Button(action: { mode.wrappedValue.dismiss() }) {
-                HStack {
-                    Image(systemName: "arrow.left")
-                    Text(friend.fullName)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(
+                leading: Button(action: { mode.wrappedValue.dismiss() }) {
+                    HStack {
+                        Image(systemName: "arrow.left")
+                        Text(friend.fullName)
+                    }
                 }
-            }
-        )
+            )
+        }
+        .onAppear {
+            photoViewModel.fetchFriends(userId: friend.id)
+        }
+        .onPreferenceChange(PhotoHeightPreferenceKey.self) { height in
+            photoViewHeight = height
+        }
+        .padding(.horizontal, 5)
     }
 }
-
-//struct FriendDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FriendsView()
-//    }
-//}
